@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photography — UZIWORKS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="/">UZIWORKS</a>
+    <button class="menu-button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<nav class="menu-overlay" aria-label="Main navigation">
+    <div class="menu-links">
+        <a href="/about">ABOUT</a>
+        <a href="/works">WORKS</a>
+        <a href="/contact">CONTACT</a>
+    </div>
+</nav>
+
+<main class="page">
+    <section class="page-heading">
+        <h1>Photography</h1>
+        <p>A collection of UZIWORKS photography. Drop your JPG, JPEG, PNG or WEBP files into <b>static/media/photography/</b> and add them to this page when you're ready.</p>
+    </section>
+
+    <section class="gallery">
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-01.jpg') }}" alt="Photography 01">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-02.jpg') }}" alt="Photography 02">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-03.jpg') }}" alt="Photography 03">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-04.jpg') }}" alt="Photography 04">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-05.jpg') }}" alt="Photography 05">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-06.jpg') }}" alt="Photography 06">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-07.jpg') }}" alt="Photography 07">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-08.jpg') }}" alt="Photography 08">
+    </div>
+
+    <div class="gallery-item">
+        <img src="{{ url_for('static', filename='media/photography/photo-09.jpg') }}" alt="Photography 09">
+    </div>
+
+
+</section>
+</main>
+
+<div class="lightbox">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img src="" alt="">
+</div>
+<footer class="footer">
+    <span>UZIWORKS © 2026</span>
+    <span>PHOTOGRAPHY · VIDEOGRAPHY</span>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
