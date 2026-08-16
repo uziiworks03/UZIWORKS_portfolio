@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact — UZIWORKS</title>
+
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="logo" href="/">UZIWORKS</a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+
+<nav class="menu-overlay" id="menuOverlay">
+
+    <button class="menu-close" id="menuClose">
+        CLOSE
+    </button>
+
+    <div class="menu-links">
+
+        <a href="/about">ABOUT</a>
+
+        <a href="/#works">WORKS</a>
+
+        <a href="/contact">CONTACT</a>
+
+    </div>
+
+</nav>
+
+
+<main class="contact-page">
+
+    <section class="contact-section">
+
+        <p class="small-title">GET IN TOUCH</p>
+
+        <h1>CONTACT</h1>
+
+        <p class="contact-description">
+            For photography, videography, collaborations,
+            events, or inquiries, feel free to reach out.
+        </p>
+
+
+       <div class="social-icons">
+
+    <!-- INSTAGRAM -->
+   <a href="https://www.instagram.com/sleepyuziii/"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+
+   <a href="https://www.tiktok.com/@uziidnd"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+</a>
+
+    <!-- FACEBOOK -->
+    <a href="https://web.facebook.com/john.macabuag.39"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+</div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <span>UZIWORKS © 2026</span>
+    <span>PHOTOGRAPHY · VIDEOGRAPHY</span>
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

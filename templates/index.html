@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UZIWORKS — Photography & Videography</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="site-header">
+
+    <a class="logo" href="/">UZIWORKS</a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+<nav class="menu-overlay" id="menuOverlay">
+
+    <button class="menu-close" id="menuClose">
+        CLOSE
+    </button>
+
+    <div class="menu-links">
+
+        <a href="/about">
+            ABOUT
+        </a>
+
+        <a href="/#works">
+            WORKS
+        </a>
+
+        <a href="/contact">
+            CONTACT
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main>
+    <section class="hero">
+        <div>
+            <h1>UZI<br>WORKS</h1>
+            <p>Photography and videography focused on capturing movement, emotion, sport, people, and the moments worth remembering.</p>
+        </div>
+    </section>
+
+    <section class="work-choice">
+        <a class="choice" href="/photography">
+            <img class="choice-media" src="{{ url_for('static', filename='media/photography/cover.svg') }}"
+                 onerror="this.style.display='none'" alt="">
+            <span class="choice-title">Photography</span>
+        </a>
+        <a class="choice" href="/videography">
+            <img class="choice-media" src="{{ url_for('static', filename='media/videography/cover.svg') }}"
+                 onerror="this.style.display='none'" alt="">
+            <span class="choice-title">Videography</span>
+        </a>
+    </section>
+</main>
+<footer class="footer">
+    <span>UZIWORKS © 2026</span>
+    <span>PHOTOGRAPHY · VIDEOGRAPHY</span>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

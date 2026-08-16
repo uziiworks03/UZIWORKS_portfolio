@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Videography — UZIWORKS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="/">UZIWORKS</a>
+    <button class="menu-button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<nav class="menu-overlay" aria-label="Main navigation">
+    <div class="menu-links">
+        <a href="/about">ABOUT</a>
+        <a href="/works">WORKS</a>
+        <a href="/contact">CONTACT</a>
+    </div>
+</nav>
+
+<main class="page">
+    <section class="page-heading">
+        <h1>Videography</h1>
+        <p>A collection of UZIWORKS films, sports content,
+        events, and visual stories.</b>.</p>
+    </section>
+
+    <section class="video-grid">
+
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="{{ url_for('static', filename='media/videography/video-01.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="{{ url_for('static', filename='media/videography/video-02.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+</section>
+</main>
+<footer class="footer">
+    <span>UZIWORKS © 2026</span>
+    <span>PHOTOGRAPHY · VIDEOGRAPHY</span>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
