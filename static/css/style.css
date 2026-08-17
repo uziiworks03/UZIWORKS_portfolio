@@ -80,38 +80,50 @@ img, video {
 
 .menu-overlay {
     position: fixed;
-    z-index: 90;
+    z-index: 9999;
     inset: 0;
-    background: rgba(0,0,0,.97);
+    background: rgba(0, 0, 0, 0.97);
+
     display: grid;
     place-items: center;
+
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+
     transition: opacity .35s ease, visibility .35s ease;
 }
 
 .menu-overlay.open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-links {
     width: min(700px, 90vw);
+    position: relative;
+    z-index: 10000;
 }
 
 .menu-links a {
     display: block;
+    color: #ffffff;
+    text-decoration: none;
+
     border-bottom: 1px solid #292929;
     padding: 22px 0;
+
     font-size: clamp(38px, 7vw, 80px);
     font-weight: 600;
     letter-spacing: -.05em;
+
     transition: padding-left .3s ease, color .3s ease;
 }
 
 .menu-links a:hover {
     padding-left: 18px;
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 .hero {
