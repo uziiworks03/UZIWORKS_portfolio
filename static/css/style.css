@@ -71,46 +71,38 @@ utton {
 ========================= */
 
 .menu-button {
-    position: fixed;
-    top: 30px;
-    right: 35px;
+    position: fixed !important;
+    top: 30px !important;
+    right: 35px !important;
 
-    width: 48px;
-    height: 48px;
+    width: 50px !important;
+    height: 50px !important;
 
-    border: 0;
-    background: transparent;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    gap: 7px !important;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-
-    gap: 6px;
-
-    cursor: pointer;
-
-    z-index: 10002;
+    z-index: 10002 !important;
+    cursor: pointer !important;
+    border: 0 !important;
+    background: transparent !important;
 }
 
 .menu-button span {
     display: block;
-
     width: 31px;
     height: 2px;
-
     background: currentColor;
-
-    transition: transform 0.35s ease,
-                opacity 0.35s ease;
 }
 
 .menu-button span:nth-child(2) {
-    width: 25px;
+    width: 25px !important;
 }
 
 .menu-button span:nth-child(3) {
-    width: 32px;
+    width: 32px !important;
 }
 
 
@@ -136,37 +128,29 @@ utton {
 ========================= */
 
 .menu-overlay {
-    position: fixed;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #000 !important;
 
-    inset: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    width: 100vw;
-    height: 100vh;
+    z-index: 9998 !important;
 
-    background: rgba(0, 0, 0, 0.97);
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 10000;
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition:
-        opacity 0.35s ease,
-        visibility 0.35s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-
-/* WHEN MENU IS OPEN */
-
-.menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+.menu-overlay.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
 }
 
 
@@ -204,10 +188,6 @@ utton {
 .menu-links a {
     display: block;
 
-    color: white;
-
-    text-decoration: none;
-
     border-bottom: 1px solid #292929;
 
     padding: 22px 0;
@@ -218,16 +198,17 @@ utton {
 
     letter-spacing: -0.05em;
 
-    transition:
-        padding-left 0.3s ease,
-        color 0.3s ease;
+    color: white;
+
+    text-decoration: none;
+
+    transition: padding-left .3s ease, color .3s ease;
 }
 
 .menu-links a:hover {
     padding-left: 18px;
     color: #aaa;
 }
-
 
 /* =========================
    PHONE

@@ -4,14 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuOverlay = document.getElementById("menuOverlay");
     const menuClose = document.getElementById("menuClose");
 
-    console.log("MENU:", menuButton, menuOverlay, menuClose);
+    if (!menuButton || !menuOverlay) {
+        console.log("Menu elements not found");
+        return;
+    }
 
     menuButton.addEventListener("click", function () {
         menuOverlay.classList.add("open");
+        menuButton.classList.add("open");
     });
 
-    menuClose.addEventListener("click", function () {
-        menuOverlay.classList.remove("open");
-    });
+    if (menuClose) {
+        menuClose.addEventListener("click", function () {
+            menuOverlay.classList.remove("open");
+            menuButton.classList.remove("open");
+        });
+    }
 
 });
