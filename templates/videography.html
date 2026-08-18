@@ -8,25 +8,40 @@
 </head>
 <body>
 <header class="site-header">
+
     <a class="logo" href="/">UZIWORKS</a>
-    <button class="menu-button" aria-label="Open menu">
-        <span></span><span></span><span></span>
+
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
     </button>
+
 </header>
 
-<nav class="menu-overlay" aria-label="Main navigation">
+<nav class="menu-overlay" id="menuOverlay" aria-label="Main navigation">
+
+    <button class="menu-close" id="menuClose" type="button">
+        CLOSE
+    </button>
+
     <div class="menu-links">
+
         <a href="/about">ABOUT</a>
-        <a href="/works">WORKS</a>
+
+        <a href="/#works">WORKS</a>
+
         <a href="/contact">CONTACT</a>
+
     </div>
+
 </nav>
 
 <main class="page">
     <section class="page-heading">
         <h1>Videography</h1>
         <p>A collection of UZIWORKS films, sports content,
-        events, and visual stories.</b>.</p>
+        events, and visual stories.</p>
     </section>
 
     <section class="video-grid">

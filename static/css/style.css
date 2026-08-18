@@ -55,7 +55,7 @@ img, video {
     line-height: 1;
 }
 
-.menu-button {
+utton {
     border: 0;
     background: transparent;
     width: 48px;
@@ -66,66 +66,186 @@ img, video {
     gap: 6px;
 }
 
-.menu-button span {
-    display: block;
-    width: 31px;
-    height: 2px;
-    background: currentColor;
-    transition: transform .35s ease, opacity .35s ease;
+/* =========================
+   MENU BUTTON
+========================= */
+
+.menu-button {
+    position: fixed;
+    top: 30px;
+    right: 35px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    z-index: 10002;
 }
 
-.menu-button.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.menu-button.open span:nth-child(2) { opacity: 0; }
-.menu-button.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.menu-button span {
+    display: block;
+
+    width: 31px;
+    height: 2px;
+
+    background: currentColor;
+
+    transition: transform 0.35s ease,
+                opacity 0.35s ease;
+}
+
+.menu-button span:nth-child(2) {
+    width: 25px;
+}
+
+.menu-button span:nth-child(3) {
+    width: 32px;
+}
+
+
+/* =========================
+   MENU BUTTON WHEN OPEN
+========================= */
+
+.menu-button.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================
+   FULL SCREEN MENU
+========================= */
 
 .menu-overlay {
     position: fixed;
-    z-index: 9999;
+
     inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
     background: rgba(0, 0, 0, 0.97);
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10000;
 
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity .35s ease, visibility .35s ease;
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
 }
 
-.menu-overlay.open {
+
+/* WHEN MENU IS OPEN */
+
+.menu-overlay.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.menu-close {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    border: 0;
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    z-index: 10003;
+}
+
+
+/* =========================
+   MENU LINKS
+========================= */
+
 .menu-links {
     width: min(700px, 90vw);
-    position: relative;
-    z-index: 10000;
 }
 
 .menu-links a {
     display: block;
-    color: #ffffff;
+
+    color: white;
+
     text-decoration: none;
 
     border-bottom: 1px solid #292929;
+
     padding: 22px 0;
 
     font-size: clamp(38px, 7vw, 80px);
-    font-weight: 600;
-    letter-spacing: -.05em;
 
-    transition: padding-left .3s ease, color .3s ease;
+    font-weight: 600;
+
+    letter-spacing: -0.05em;
+
+    transition:
+        padding-left 0.3s ease,
+        color 0.3s ease;
 }
 
 .menu-links a:hover {
     padding-left: 18px;
-    color: #aaaaaa;
+    color: #aaa;
 }
 
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .menu-button {
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu-close {
+        top: 20px;
+        right: 20px;
+    }
+
+}
 .hero {
     min-height: 100vh;
     display: grid;
@@ -372,11 +492,12 @@ img, video {
 }
 
 @media (max-width: 700px) {
-    .site-header { padding: 0 20px; height: 75px; }
-    .page { padding: 115px 18px 55px; }
-    .page-heading {
-        display: block;
-    }
+   .site-header {
+    padding: 0 20px;
+    height: 75px;
+    position: relative;
+    z-index: 10001;
+}
     .page-heading p { margin-top: 25px; }
     .gallery { columns: 2 150px; column-gap: 7px; }
     .gallery-item { margin-bottom: 7px; }
@@ -650,7 +771,7 @@ img, video {
     z-index: 1001;
 }
 
-.menu-button {
+-button {
     position: fixed !important;
     top: 30px !important;
     right: 35px !important;
@@ -674,14 +795,22 @@ img, video {
     z-index: 9999 !important;
 }
 
-.menu-button span {
-    display: block !important;
-    height: 3px !important;
-    background: #ffffff !important;
-    width: 32px !important;
+.menu-button {
+    position: fixed !important;
+    top: 30px !important;
+    right: 35px !important;
 
-    opacity: 1 !important;
-    visibility: visible !important;
+    width: 50px !important;
+    height: 50px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    gap: 7px !important;
+
+    z-index: 10002 !important;
+    cursor: pointer !important;
 }
 
 .menu-button span:nth-child(2) {
@@ -699,6 +828,7 @@ img, video {
         right: 20px !important;
     }
 }
+
 /* ===== FULL SCREEN MENU ===== */
 
 .menu-overlay {
@@ -719,6 +849,11 @@ img, video {
     visibility: hidden !important;
 
     transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .menu-overlay.active {
